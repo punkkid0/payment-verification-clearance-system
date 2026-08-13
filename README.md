@@ -6,6 +6,38 @@ Students upload a payment receipt and Remita RRR. The system checks that RRR aga
 
 ---
 
+## Live demo (open these)
+
+| What | URL |
+|---|---|
+| **App (student + admin UI)** | https://antidote-enhance-overlook.ngrok-free.dev |
+| **API base URL** (Postman / tests) | https://antidote-enhance-overlook.ngrok-free.dev/api |
+| **API health check** | https://antidote-enhance-overlook.ngrok-free.dev/api/health |
+| **Swagger — try the API in the browser** | https://antidote-enhance-overlook.ngrok-free.dev/api-docs |
+
+The first visit on ngrok may show a “Visit Site” warning. Click through once.
+
+**Demo logins**
+
+| Role | Username | Password |
+|---|---|---|
+| Admin | `admin` | `admin123` |
+| Student | `student1` | `student123` |
+
+Student demo RRR: `RRR-STUDENT1-001234567890` · amount `75600`
+
+**Try Swagger**
+
+1. Open https://antidote-enhance-overlook.ngrok-free.dev/api-docs
+2. Run `POST /api/auth/login` with `{ "username": "admin", "password": "admin123" }`
+3. Copy `token` from the response
+4. Click **Authorize** and paste `Bearer <token>` (include the word `Bearer`)
+5. Call the other endpoints
+
+This live URL is a temporary demo tunnel. If it is down, run the project locally — the same paths work at `http://localhost:5000` (API + Swagger) and `http://localhost:3000` (app).
+
+---
+
 ## What it does
 
 | Who | What they can do |
@@ -134,9 +166,13 @@ Frontend (optional) — `frontend/.env`:
 
 ## API documentation (Swagger)
 
-While the backend is running, open:
+- **Live:** https://antidote-enhance-overlook.ngrok-free.dev/api-docs  
+- **Local:** http://localhost:5000/api-docs  
 
-**http://localhost:5000/api-docs**
+API base for tests:
+
+- **Live:** `https://antidote-enhance-overlook.ngrok-free.dev/api`  
+- **Local:** `http://localhost:5000/api`
 
 1. `POST /api/auth/login` with `{ "username": "admin", "password": "admin123" }`.
 2. Copy `token` from the response.
