@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Secrets and local env
+.env
+.env.local
+.env.*.local
+backend/.env
+frontend/.env
+postgresql cred
+*cred*
+*.pem
+
+# Uploads generated at runtime
+backend/uploads/receipts/*
+backend/uploads/avatars/*
+backend/uploads/certificates/*
+!backend/uploads/**/.gitkeep
+
+# Build and caches
+frontend/build/
+dist/
+coverage/
+.nyc_output/
+*.log
+
+# Editor and OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Documents that are not part of the app
+*.doc
+*.docx
+*.pdf
+
+# Scratch / one-off helpers
+tmp/
+temp/
+*.tmp
+show-db.js
