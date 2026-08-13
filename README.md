@@ -91,7 +91,19 @@ render.yaml              Optional one-service Render deploy
 
 ---
 
-## Run it locally
+## Install on a new computer
+
+She does **not** copy `node_modules` from your PC. She downloads this repo, then:
+
+1. Read **[INSTALL.md](INSTALL.md)** (what to download and how to follow along).
+2. Double-click **`setup.bat`** — installs Node if needed, downloads all npm packages, creates `backend/.env`, sets up the database.
+3. Double-click **`start.bat`** — opens the API and the website.
+
+App: http://localhost:3000 · API: http://localhost:5000/api · Swagger: http://localhost:5000/api-docs
+
+---
+
+## Run it locally (manual)
 
 You need **Node.js 18+** and **PostgreSQL**.
 
